@@ -1,4 +1,4 @@
-const User = require('../../models/userModel');
+const userModel = require('../../models/userModel');
 // Store hash in your password DB.
 const bcrypt = require('bcryptjs');
 
@@ -16,14 +16,14 @@ async function userSignUpController(req,res){
         }
 
         if(!email){
-            throw new Error("Plese provide email")
+            throw new Error("Please provide email")
         }
         if(!password){
-            throw new Error("Plese provide password")
+            throw new Error("Please provide password")
 
         }
         if(!name){
-            throw new Error("Plese provide name")
+            throw new Error("Please provide name")
 
         }
         const salt = bcrypt.genSaltSync(10);
